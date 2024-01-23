@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router'
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <RouterLink :to="{ name: 'home' }" class="nav-link active" aria-current="page">หน้าแรก</RouterLink>
+                        <RouterLink :to="{ name: 'home' }" class="nav-link active" aria-current="page"><i class="bi bi-house-fill me-1"></i>หน้าแรก</RouterLink>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">สิ่งมหัศจรรย์ของโลก</a>

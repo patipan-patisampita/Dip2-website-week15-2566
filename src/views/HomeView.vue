@@ -1,5 +1,7 @@
 <script setup>
-
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+toast("ยินดีต้อนรับแผนกเทคโนโลยีสารสนเทศ")
 </script>
 
 <template>

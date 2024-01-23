@@ -24,7 +24,7 @@ import { RouterLink, RouterView } from 'vue-router'
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">ประวัติความเป็นมา</a></li>
-              <li><a class="dropdown-item" href="#">วิสัยทัศน์</a></li>
+              <li><RouterLink :to="{ name: 'about' }" class="dropdown-item">วิสัยทัศน์</RouterLink></li>
               <li><a class="dropdown-item" href="#">บุคคลากร</a></li>
               <li><a class="dropdown-item" href="#">แผนที่</a></li>
               <li>

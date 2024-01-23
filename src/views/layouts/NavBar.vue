@@ -16,12 +16,12 @@ import { RouterLink } from 'vue-router'
                         <RouterLink :to="{ name: 'home' }" class="nav-link active" aria-current="page"><i class="bi bi-house-fill me-1"></i>หน้าแรก</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">สิ่งมหัศจรรย์ของโลก</a>
+                        <a class="nav-link" href="#"><i class="bi bi-bank me-1"></i>สิ่งมหัศจรรย์ของโลก</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            เกี่ยวกับเรา
+                            <i class="bi bi-bank2 me-1"></i>เกี่ยวกับเรา
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">ประวัติความเป็นมา</a></li>

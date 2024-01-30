@@ -20,7 +20,12 @@
                         <h5>ระบบลงทะเบียนผู้ใช้งาน</h5>
                     </div>
                     <div class="card-body">
-                        
+                        <form action="">
+                            <div class="mb-2">
+                                <label for="" class="form-label">ชื่อ</label>
+                                <input type="text" class="form-control" placeholder="ชื่อผู้สมัคร">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,9 @@
 <script setup>
 import { reactive } from 'vue';
+import { useRoute } from 'vue-router';
+
+const router = useRoute()
+
 const userForm = reactive({
     fname: "",
     lname: "",
@@ -8,6 +12,10 @@ const userForm = reactive({
     phone: "",
     address: "",
 });
+
+function SignInPage() {
+    router.push({ name: "signin" })
+}
 
 </script>
 
@@ -36,7 +44,8 @@ const userForm = reactive({
                         <form @click.prevent>
                             <div class="mb-2">
                                 <label for="" class="form-label">ชื่อ</label>
-                                <input type="text" class="form-control" required v-model="userForm.fname" placeholder="ชื่อผู้สมัคร">
+                                <input type="text" class="form-control" required v-model="userForm.fname"
+                                    placeholder="ชื่อผู้สมัคร">
                             </div>
                             <div class="mb-2">
                                 <label for="" class="form-label">นามสกุล</label>
@@ -64,6 +73,12 @@ const userForm = reactive({
                             </div>
                             <div class="mb-2">
                                 <p type="submit" class="btn btn-primary shadow d-block">สมัครสมาชิก</p>
+                                <p @click="SignInPage" class="btn btn-primary shadow d-block">
+                                    Already have an Account?
+                                    <router-link :to="{ name: 'signin' }">
+                                        Sing In
+                                    </router-link>
+                                </p>
                             </div>
                         </form>
                     </div>
@@ -84,4 +99,5 @@ const userForm = reactive({
 
 .form-label {
     color: green;
-}</style>
+}
+</style>

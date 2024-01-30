@@ -31,16 +31,21 @@
                             </div>
                             <div class="mb-2">
                                 <label for="" class="form-label">อีเมลล์</label>
-                                <input type="text" class="form-control" placeholder="อีเมลล์ผู้สมัคร">
+                                <input type="email" class="form-control" placeholder="อีเมลล์ผู้สมัคร">
                             </div>
                             <div class="mb-2">
                                 <label for="" class="form-label">รหัสผ่าน</label>
-                                <input type="text" class="form-control" placeholder="รหัสผ่านผู้สมัคร">
+                                <input type="password" class="form-control" placeholder="รหัสผ่านผู้สมัคร">
                             </div>
                             <div class="mb-2">
                                 <label for="" class="form-label">โทรศัพท์</label>
                                 <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์">
                             </div>
+                            <div class="mb-2">
+                                <label for="" class="form-label">ที่อยู่:</label>
+                                <textarea name="" id="" cols="51" rows="2"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm shadow">สมัครสมาชิก</button>
                         </form>
                     </div>
                 </div>

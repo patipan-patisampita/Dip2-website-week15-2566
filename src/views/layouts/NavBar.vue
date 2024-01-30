@@ -13,7 +13,11 @@ import { RouterLink } from 'vue-router'
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <RouterLink :to="{ name: 'home' }" class="nav-link active" aria-current="page"><i class="bi bi-house-fill me-1"></i>หน้าแรก</RouterLink>
+                        <RouterLink :to="{ name: 'home' }" class="nav-link active" aria-current="page"><i
+                                class="bi bi-house-fill me-1"></i>หน้าแรก</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <router-link :to="{name:'signin'}" class="nav-link" href="#"><i class="bi bi-bank me-1"></i>Sign-in</router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="bi bi-bank me-1"></i>สิ่งมหัศจรรย์ของโลก</a>
@@ -69,7 +73,8 @@ import { RouterLink } from 'vue-router'
     </nav>
 </template>
 
-<style scoped>@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
 .navbar {
     font-family: 'Sarabun', sans-serif;

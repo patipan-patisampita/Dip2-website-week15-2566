@@ -25,6 +25,22 @@
                                 <label for="" class="form-label">ชื่อ</label>
                                 <input type="text" class="form-control" placeholder="ชื่อผู้สมัคร">
                             </div>
+                            <div class="mb-2">
+                                <label for="" class="form-label">นามสกุล</label>
+                                <input type="text" class="form-control" placeholder="นามสกุลผู้สมัคร">
+                            </div>
+                            <div class="mb-2">
+                                <label for="" class="form-label">อีเมลล์</label>
+                                <input type="text" class="form-control" placeholder="อีเมลล์ผู้สมัคร">
+                            </div>
+                            <div class="mb-2">
+                                <label for="" class="form-label">รหัสผ่าน</label>
+                                <input type="text" class="form-control" placeholder="รหัสผ่านผู้สมัคร">
+                            </div>
+                            <div class="mb-2">
+                                <label for="" class="form-label">โทรศัพท์</label>
+                                <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์">
+                            </div>
                         </form>
                     </div>
                 </div>

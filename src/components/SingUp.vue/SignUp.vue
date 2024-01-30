@@ -59,4 +59,15 @@
 
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+
+.container {
+    font-family: 'Sarabun', sans-serif;
+
+}
+
+.form-label {
+    color: green;
+}
+</style>

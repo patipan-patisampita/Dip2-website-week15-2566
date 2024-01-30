@@ -1,0 +1,34 @@
+{
+    "wonders": [
+        {
+            "id": "1",
+            "name": "Giza Pyramids",
+            "location": "Giza Necropolis, Egypt",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pyramids_of_the_Giza_Necropolis.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Great Wall of China",
+            "location": "China",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/The_Great_Wall_of_China_at_Jinshanling.jpg"
+        },
+        {
+            "id": "3",
+            "name": "Petra",
+            "location": "Ma'an, Jordan",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/The_Monastery%2C_Petra%2C_Jordan8.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Colosseum",
+            "location": "Rome, Italy",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Rome_Colosseum_exterior_panorama.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Chichén Itzá",
+            "location": "Yucatán, Mexico",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chichen-Itza-Castillo-Seen-From-East.JPG"
+        }
+    ]
+}

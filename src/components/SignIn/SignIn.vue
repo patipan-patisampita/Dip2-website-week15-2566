@@ -1,9 +1,17 @@
 <script setup>
 import { reactive } from 'vue';
+import { useRoute } from 'vue-router';
+
+const router = useRoute()
+
 const userForm = reactive({
     email: "",
     password: "",
 });
+
+function SignUpPage() {
+    router.push({ name: "signup" })
+}
 
 </script>
 
@@ -29,6 +37,12 @@ const userForm = reactive({
                             </div>
                             <div class="mb-2">
                                 <p type="submit" class="btn btn-primary shadow d-block">เข้าสู่ระบบ</p>
+                                 <p @click="SignUpPage" class="text-body text-center d-block">
+                                        Dont' have an Account?
+                                        <router-link :to="{ name: 'signup' }" class="text-decoration-none font-weight-bold">
+                                            Sing Up
+                                        </router-link>
+                                    </p>
                             </div>
                         </form>
                     </div>

@@ -16,7 +16,7 @@ const userForm = reactive({
                         <h5 class="text-white">เข้าสู่ระบบการจัดการออนไลน์</h5>
                     </div>
                     <div class="card-body text-success">
-                        <form>
+                        <form @click.prevent>
                             <div class="mb-2">
                                 <label for="" class="form-label">อีเมลล์</label>
                                 <input type="email" class="form-control" v-model="userForm.email"
@@ -28,7 +28,7 @@ const userForm = reactive({
                                     placeholder="รหัสผ่านผู้สมัคร" required>
                             </div>
                             <div class="mb-2">
-                                <p type="submit" class="btn btn-primary shadow d-block">สมัครสมาชิก</p>
+                                <p type="submit" class="btn btn-primary shadow d-block">เข้าสู่ระบบ</p>
                             </div>
                         </form>
                     </div>

@@ -73,7 +73,7 @@ function SignInPage() {
                             </div>
                             <div class="mb-2">
                                 <p type="submit" class="btn btn-primary shadow d-block">สมัครสมาชิก</p>
-                                <p @click="SignInPage" class="btn btn-primary shadow d-block">
+                                <p @click="SignInPage" class="text-body text-center d-block">
                                     Already have an Account?
                                     <router-link :to="{ name: 'signin' }">
                                         Sing In

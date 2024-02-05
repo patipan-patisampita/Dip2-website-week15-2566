@@ -69,9 +69,12 @@ const submitForm = async () => {
                         <form @click.prevent>
                             <div class="mb-2">
                                 <label for="" class="form-label">ชื่อ</label>
-                                <input type="text" class="form-control" required v-model="userForm.fname"
-                                    placeholder="ชื่อผู้สมัคร">
+                                <input type="text" class="form-control" required v-model="userForm.fname" placeholder="ชื่อผู้สมัคร">
                             </div>
+                             <span class="text-danger" v-for="error in v$.fname.$errors" :key="error.$uid">
+                                    {{ error.$message }}
+                            </span>
+
                             <div class="mb-2">
                                 <label for="" class="form-label">นามสกุล</label>
                                 <input type="text" class="form-control" v-model="userForm.lname"

@@ -26,13 +26,20 @@ const rules = {
     address: { required },
 }
 
+const v$ = useVuelidate(rules, userForm)
 
 function SignInPage() {
     router.push({ name: "signin" })
 }
 
 const submitForm = async () => {
-    alert("Success, form submited!")
+    const result = await v$.value.$validate()
+    if (result) {
+        alert("Success, form submited!")
+    } else {
+        alert("error, form submited!")
+    }
+    
 }
 
 </script>

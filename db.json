@@ -1,5 +1,16 @@
 {
-  "users":[],
+  "users": [
+    {
+      "id": "1",
+      "fname": "Mark ",
+      "lname": "Zuckerberg",
+      "email": "mark@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678",
+      "phone": "0954721021",
+      "address": "USA"
+    }
+  ],
   "wonders": [
     {
       "id": "1",

@@ -50,6 +50,8 @@ const submitForm = async () => {
 
         if (result.status == 201) {
             console.log("ลงทะเบียนเรียบร้อยแล้วครับ")
+            localStorage.setItem("user-info", JSON.stringify(result.data))
+            console.log(result.data)
         } else {
             console.log("ลงทะเบียนไม่เรียบร้อยแล้วครับ")
         }

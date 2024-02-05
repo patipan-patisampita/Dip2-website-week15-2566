@@ -12,6 +12,8 @@
     "json-run": "json-server --watch db.json"
   },
   "dependencies": {
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.3",
     "json-server": "^1.0.0-alpha.23",

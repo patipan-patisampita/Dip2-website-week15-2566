@@ -1,20 +1,38 @@
 <script setup>
 import { reactive } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRouter } from 'vue-router';
+import { useVuelidate } from '@vuelidate/core'
+import { required } from '@vuelidate/validators'
 
-const router = useRoute()
+const router = useRouter()
 
 const userForm = reactive({
     fname: "",
     lname: "",
     email: "",
     password: "",
+    password_confirmation: "",
     phone: "",
     address: "",
 });
 
+const rules = {
+    fname: { required },
+    lname: { required },
+    email: { required },
+    password: { required },
+    password_confirmation: { required },
+    phone: { required },
+    address: { required },
+}
+
+
 function SignInPage() {
     router.push({ name: "signin" })
+}
+
+const submitForm = async () => {
+    alert("Success, form submited!")
 }
 
 </script>
@@ -62,6 +80,13 @@ function SignInPage() {
                                 <input type="password" class="form-control" v-model="userForm.password"
                                     placeholder="รหัสผ่านผู้สมัคร" required>
                             </div>
+
+                            <div class="mb-2">
+                                <label for="" class="form-label">ยืนยันรหัสผ่าน</label>
+                                <input type="password" class="form-control" v-model="userForm.password_confirmation"
+                                    placeholder="ยืนยันรหัสผ่านผู้สมัคร" required>
+                            </div>
+
                             <div class="mb-2">
                                 <label for="" class="form-label">โทรศัพท์</label>
                                 <input type="text" class="form-control" v-model="userForm.phone" placeholder="เบอร์โทรศัพท์"
@@ -72,7 +97,7 @@ function SignInPage() {
                                 <textarea v-model="userForm.address" cols="51" rows="2"></textarea>
                             </div>
                             <div class="mb-2">
-                                <p type="submit" class="btn btn-primary shadow d-block">สมัครสมาชิก</p>
+                                <p type="submit" @click="submitForm" class="btn btn-primary shadow d-block">สมัครสมาชิก</p>
                                 <p @click="SignInPage" class="text-body text-center d-block">
                                     Already have an Account?
                                     <router-link :to="{ name: 'signin' }" class="text-decoration-none font-weight-bold">
@@ -84,6 +109,7 @@ function SignInPage() {
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </template>

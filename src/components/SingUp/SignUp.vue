@@ -1,6 +1,6 @@
 <script setup>
 import axios from 'axios';
-import { reactive, computed } from 'vue';
+import { reactive, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, sameAs, minLength } from '@vuelidate/validators'
@@ -29,6 +29,13 @@ const rules = computed(() => {
         password_confirmation: { required, sameAs: sameAs(userForm.password) },
         phone: { required },
         address: { required },
+    }
+})
+
+onMounted(() => {
+    let user = localStorage.getItem('user-info')
+    if (user) {
+        router.push(state.redirectTo)
     }
 })
 

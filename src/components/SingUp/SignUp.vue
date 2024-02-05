@@ -1,4 +1,5 @@
 <script setup>
+import axios from 'axios';
 import { reactive, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useVuelidate } from '@vuelidate/core'
@@ -37,10 +38,24 @@ const submitForm = async () => {
     const result = await v$.value.$validate()
     if (result) {
         alert("Success, form submited!")
-    } else {
-        alert("error, form submited!")
-    }
+        let result = await axios.post('http://localhost:3000/users', {
+            fname: userForm.fname,
+            lname: userForm.lname,
+            email: userForm.email,
+            password: userForm.password,
+            password_confirmation: userForm.password_confirmation,
+            phone: userForm.phone,
+            address: userForm.address,
+        })
 
+        if (result.status == 201) {
+            console.log("ลงทะเบียนเรียบร้อยแล้วครับ")
+        } else {
+            console.log("ลงทะเบียนไม่เรียบร้อยแล้วครับ")
+        }
+    } else {
+        alert("Error, form submited!")
+    }
 }
 
 </script>

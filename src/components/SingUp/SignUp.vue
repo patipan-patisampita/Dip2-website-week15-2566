@@ -39,7 +39,7 @@ const submitForm = async () => {
     } else {
         alert("error, form submited!")
     }
-    
+
 }
 
 </script>
@@ -113,6 +113,13 @@ const submitForm = async () => {
                                 </p>
                             </div>
                         </form>
+                        <div class="mb-1">
+                            <div class="alert alert-warning" role="alert">Error</div>
+                            <span v-for="error in v$.$errors" :key="error.$uid">
+                                {{ error.$property }} - {{ error.$message }}
+                            </span>
+                        </div>
+                       
                     </div>
                 </div>
             </div>

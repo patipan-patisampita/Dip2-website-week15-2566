@@ -69,10 +69,11 @@ const submitForm = async () => {
                         <form @click.prevent>
                             <div class="mb-2">
                                 <label for="" class="form-label">ชื่อ</label>
-                                <input type="text" class="form-control" required v-model="userForm.fname" placeholder="ชื่อผู้สมัคร">
+                                <input type="text" class="form-control" required v-model="userForm.fname"
+                                    placeholder="ชื่อผู้สมัคร">
                             </div>
-                             <span class="text-danger" v-for="error in v$.fname.$errors" :key="error.$uid">
-                                    {{ error.$message }}
+                            <span class="text-danger" v-for="error in v$.fname.$errors" :key="error.$uid">
+                                {{ error.$message }}
                             </span>
 
                             <div class="mb-2">
@@ -80,32 +81,55 @@ const submitForm = async () => {
                                 <input type="text" class="form-control" v-model="userForm.lname"
                                     placeholder="นามสกุลผู้สมัคร" required>
                             </div>
+                            <span class="text-danger" v-for="error in v$.lname.$errors" :key="error.$uid">
+                                {{ error.$message }}
+                            </span>
+
                             <div class="mb-2">
                                 <label for="" class="form-label">อีเมลล์</label>
                                 <input type="email" class="form-control" v-model="userForm.email"
                                     placeholder="อีเมลล์ผู้สมัคร" required>
                             </div>
+                            <span class="text-danger" v-for="error in v$.email.$errors" :key="error.$uid">
+                                {{ error.$message }}
+                            </span>
+
                             <div class="mb-2">
                                 <label for="" class="form-label">รหัสผ่าน</label>
                                 <input type="password" class="form-control" v-model="userForm.password"
                                     placeholder="รหัสผ่านผู้สมัคร" required>
                             </div>
+                            <span class="text-danger" v-for="error in v$.password.$errors" :key="error.$uid">
+                                {{ error.$message }}
+                            </span>
 
                             <div class="mb-2">
                                 <label for="" class="form-label">ยืนยันรหัสผ่าน</label>
                                 <input type="password" class="form-control" v-model="userForm.password_confirmation"
                                     placeholder="ยืนยันรหัสผ่านผู้สมัคร" required>
                             </div>
+                            <span class="text-danger" v-for="error in v$.password_confirmation.$errors" :key="error.$uid">
+                                {{ error.$message }}
+                            </span>
 
                             <div class="mb-2">
                                 <label for="" class="form-label">โทรศัพท์</label>
                                 <input type="text" class="form-control" v-model="userForm.phone" placeholder="เบอร์โทรศัพท์"
                                     required>
                             </div>
+                            <span class="text-danger" v-for="error in v$.phone.$errors" :key="error.$uid">
+                                {{ error.$message }}
+                            </span>
+
                             <div class="mb-2">
                                 <label for="" class="form-label">ที่อยู่:</label>
                                 <textarea v-model="userForm.address" cols="51" rows="2"></textarea>
                             </div>
+
+                            <span class="text-danger" v-for="error in v$.address.$errors" :key="error.$uid">
+                                {{ error.$message }}
+                            </span>
+
                             <div class="mb-2">
                                 <p type="submit" @click="submitForm" class="btn btn-primary shadow d-block">สมัครสมาชิก</p>
                                 <p @click="SignInPage" class="text-body text-center d-block">
@@ -116,13 +140,6 @@ const submitForm = async () => {
                                 </p>
                             </div>
                         </form>
-                        <div class="mb-1">
-                            <div class="alert alert-warning" role="alert">Error</div>
-                            <span v-for="error in v$.$errors" :key="error.$uid">
-                                {{ error.$property }} - {{ error.$message }}
-                            </span>
-                        </div>
-                       
                     </div>
                 </div>
             </div>

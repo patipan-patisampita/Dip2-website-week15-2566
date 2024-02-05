@@ -5,7 +5,6 @@ import { useVuelidate } from '@vuelidate/core'
 import { required, email, sameAs, minLength } from '@vuelidate/validators'
 
 const router = useRouter()
-
 const userForm = reactive({
     fname: "",
     lname: "",

@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue';
+import { reactive, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, sameAs, minLength } from '@vuelidate/validators'
@@ -16,15 +16,17 @@ const userForm = reactive({
     address: "",
 });
 
-const rules = {
-    fname: { required },
-    lname: { required },
-    email: { required, email },
-    password: { required, minLength: minLength(4) },
-    password_confirmation: { required, sameAs: sameAs(userForm.password) },
-    phone: { required },
-    address: { required },
-}
+const rules = computed(() => {
+    return {
+        fname: { required },
+        lname: { required },
+        email: { required, email },
+        password: { required, minLength: minLength(4) },
+        password_confirmation: { required, sameAs: sameAs(userForm.password) },
+        phone: { required },
+        address: { required },
+    }
+})
 
 const v$ = useVuelidate(rules, userForm)
 

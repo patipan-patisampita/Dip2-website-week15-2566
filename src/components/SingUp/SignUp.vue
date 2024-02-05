@@ -2,7 +2,7 @@
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { useVuelidate } from '@vuelidate/core'
-import { required } from '@vuelidate/validators'
+import { required, email, sameAs, minLength } from '@vuelidate/validators'
 
 const router = useRouter()
 
@@ -19,9 +19,9 @@ const userForm = reactive({
 const rules = {
     fname: { required },
     lname: { required },
-    email: { required },
-    password: { required },
-    password_confirmation: { required },
+    email: { required, email },
+    password: { required, minLength: minLength(4) },
+    password_confirmation: { required, sameAs: sameAs(userForm.password) },
     phone: { required },
     address: { required },
 }

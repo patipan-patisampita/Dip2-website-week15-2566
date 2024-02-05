@@ -9,6 +9,16 @@
       "password_confirmation": "12345678",
       "phone": "0954721021",
       "address": "USA"
+    },
+    {
+      "id": "9e6c",
+      "fname": "Elon ",
+      "lname": "Musk",
+      "email": "elon@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678",
+      "phone": "0254052574",
+      "address": "USA"
     }
   ],
   "wonders": [

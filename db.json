@@ -19,6 +19,36 @@
       "password_confirmation": "12345678",
       "phone": "0254052574",
       "address": "USA"
+    },
+    {
+      "id": "161c",
+      "fname": "Bill",
+      "lname": "Gate",
+      "email": "bill@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678",
+      "phone": "4689656797",
+      "address": "USA"
+    },
+    {
+      "id": "9fdc",
+      "fname": "Jeff",
+      "lname": "Beszos",
+      "email": "jeff@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678",
+      "phone": "0467979746",
+      "address": "USA"
+    },
+    {
+      "id": "17c0",
+      "fname": "Jack",
+      "lname": "ma",
+      "email": "jack@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678",
+      "phone": "7878787879",
+      "address": "china"
     }
   ],
   "wonders": [

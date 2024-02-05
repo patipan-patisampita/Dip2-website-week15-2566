@@ -4,8 +4,12 @@ import { reactive, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, sameAs, minLength } from '@vuelidate/validators'
-
 const router = useRouter()
+
+const state = reactive({
+    redirectTo: "/",
+})
+
 const userForm = reactive({
     fname: "",
     lname: "",
@@ -53,6 +57,7 @@ const submitForm = async () => {
             localStorage.setItem("user-info", JSON.stringify(result.data))
             console.log(result.data)
             console.log(JSON.stringify(result.data))
+            router.push(state.redirectTo)
         } else {
             console.log("ลงทะเบียนไม่เรียบร้อยแล้วครับ")
         }

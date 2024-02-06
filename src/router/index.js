@@ -28,6 +28,12 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
+      path: '/wonders',
+      name: 'wonders',
+      meta: { title: 'สิ่งมหัศจรรย์ของโลก' },
+      component: () => import('../views/WonderView.vue')
+    },
+    {
       path: '/:pachMatch(.*)*',
       name: 'NotFound',
       meta: { title: 'ไม่พบหน้าเพ็จ' },

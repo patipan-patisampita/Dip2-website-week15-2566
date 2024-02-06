@@ -73,10 +73,10 @@ const logOut = async () => {
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">เว็บอื่นๆ</a>
+                        <a class="nav-link" href="#">เว็บอื่นๆ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" @click="logOut">ออกจากระบบ</a>
+                        <a class="nav-link" href="#" @click="logOut"><i class="bi bi-box-arrow-right me-1"></i>ออกจากระบบ</a>
                     </li>
                 </ul>
             </div>

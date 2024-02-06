@@ -34,6 +34,12 @@ const router = createRouter({
       component: () => import('../views/WonderView.vue')
     },
     {
+      path: '/add-wonder',
+      name: 'addwonders',
+      meta: { title: 'เพิ่มสิ่งมหัศจรรย์ของโลก' },
+      component: () => import('../components/Wonder/AddWonder.vue')
+    },
+    {
       path: '/:pachMatch(.*)*',
       name: 'NotFound',
       meta: { title: 'ไม่พบหน้าเพ็จ' },

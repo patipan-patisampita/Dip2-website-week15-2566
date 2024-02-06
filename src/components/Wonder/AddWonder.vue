@@ -18,7 +18,7 @@
                         </span>
                     </div>
                     <div class="card-body text-success">
-                        <form @submit="add - wonder">
+                        <form @submit="addWonder">
                             <div class="mb-1">
                                 <label for="">ชื่อสิ่งมหัศจรรย์ของโลก</label>
                                 <input type="text" class="form-control" />

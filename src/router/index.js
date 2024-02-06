@@ -26,6 +26,12 @@ const router = createRouter({
       name: 'about',
       meta: { title: 'เกี่ยวกับเรา' },
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/:pachMatch(.*)*',
+      name: 'NotFound',
+      meta: { title: 'ไม่พบหน้าเพ็จ' },
+      component: () => import('../views/ErrorView.vue')
     }
   ]
 })

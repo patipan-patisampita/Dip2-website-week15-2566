@@ -61,7 +61,7 @@ const wonderState = reactive({
 const router = useRouter()
 
 const addWonder = async () => {
-    await axios.post(`http://localhost:3000/wonders`,wonderState)
+    await axios.post(`https://json-server-vue3-d109.onrender.com/wonders`,wonderState)
         .then(() => {
             console.log(wonderState)
             router.push({name:'wonders'})

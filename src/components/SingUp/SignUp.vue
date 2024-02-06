@@ -49,7 +49,7 @@ const submitForm = async () => {
     const result = await v$.value.$validate()
     if (result) {
         alert("Success, form submited!")
-        let result = await axios.post('http://localhost:3000/users', {
+        let result = await axios.post('https://json-server-vue3-d109.onrender.com/users', {
             fname: userForm.fname,
             lname: userForm.lname,
             email: userForm.email,

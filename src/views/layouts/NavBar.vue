@@ -25,7 +25,7 @@ const logOut = async () => {
                     </li>
                     <li class="nav-item">
                         <router-link :to="{ name: 'signin' }" class="nav-link" href="#"><i
-                                class="bi bi-bank me-1"></i>Sign-in</router-link>
+                                class="bi bi-bank me-1"></i>เข้าสู่ระบบ</router-link>
                     </li>
 
                     <li class="nav-item dropdown">

@@ -33,8 +33,10 @@ const submitForm = async () => {
         const result = await axios.get(`http://localhost:3000/users?email=${userForm.email}&password=${userForm.password}`)
         // console.log(result)
         if (result.status == 200 && result.data.length > 0) {
+            localStorage.setItem("user-info",JSON.stringify(result.data[0]))
             alert("Success, form submited!")
-            console.log("Logged In")
+            // console.log("Logged In")
+            errorUser.userNotfound = "พบผู้ใช้งาน"
         } else {
             // console.log("No User Found")
             alert("Error, form submited!")

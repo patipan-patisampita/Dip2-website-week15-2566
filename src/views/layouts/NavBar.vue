@@ -44,10 +44,11 @@ const logOut = async () => {
                                 </RouterLink>
                             </li>
                             <li><a class="dropdown-item" href="#">แก้ไขสิ่งมหัศจรรย์ของโลก</a></li>
+                            <li><a class="dropdown-item" href="#">ลบมหัศจรรย์ของโลก</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">ลบมหัศจรรย์ของโลก</a></li>
+                            <li><a class="dropdown-item" href="https://www.wonderspodcast.com/wonders">เว็บไซต์ สิ่งมหัศจรรย์ของโลก</a></li>
                         </ul>
                     </li>
 

@@ -1,5 +1,12 @@
 <script setup>
+import router from '@/router';
 import { RouterLink } from 'vue-router'
+
+const logOut = async () => {
+    localStorage.clear()
+    await router.push({ name: 'signin' })
+}
+
 </script>
 
 <template>
@@ -17,7 +24,8 @@ import { RouterLink } from 'vue-router'
                                 class="bi bi-house-fill me-1"></i>หน้าแรก</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name:'signin'}" class="nav-link" href="#"><i class="bi bi-bank me-1"></i>Sign-in</router-link>
+                        <router-link :to="{ name: 'signin' }" class="nav-link" href="#"><i
+                                class="bi bi-bank me-1"></i>Sign-in</router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="bi bi-bank me-1"></i>สิ่งมหัศจรรย์ของโลก</a>
@@ -66,6 +74,9 @@ import { RouterLink } from 'vue-router'
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">เว็บอื่นๆ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" @click="logOut">ออกจากระบบ</a>
                     </li>
                 </ul>
             </div>

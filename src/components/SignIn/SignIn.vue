@@ -7,6 +7,10 @@ import { required, email } from '@vuelidate/validators'
 
 const router = useRouter()
 
+const state = reactive({
+    redirectTo: { name: 'home' }
+})
+
 const userForm = reactive({
     email: "",
     password: "",
@@ -29,14 +33,15 @@ const v$ = useVuelidate(rules, userForm)
 const submitForm = async () => {
     const result = await v$.value.$validate()
     if (result) {
-        
+
         const result = await axios.get(`http://localhost:3000/users?email=${userForm.email}&password=${userForm.password}`)
         // console.log(result)
         if (result.status == 200 && result.data.length > 0) {
-            localStorage.setItem("user-info",JSON.stringify(result.data[0]))
+            localStorage.setItem("user-info", JSON.stringify(result.data[0]))
             alert("Success, form submited!")
             // console.log("Logged In")
             errorUser.userNotfound = "พบผู้ใช้งาน"
+            router.push(state.redirectTo)
         } else {
             // console.log("No User Found")
             alert("Error, form submited!")
@@ -91,7 +96,7 @@ function SignUpPage() {
                                 </p>
                             </div>
                             <div class="text-center text-danger">
-                                 {{ errorUser.userNotfound }}
+                                {{ errorUser.userNotfound }}
                             </div>
                         </form>
                     </div>

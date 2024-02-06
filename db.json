@@ -87,6 +87,13 @@
       "name": "Machu Picchu",
       "location": "Cuzco Region, Peru",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg"
+    },
+    {
+      "id": "79d7",
+      "name": "Taj Mahal",
+      "location": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Taj_Mahal_in_March_2004.jpg/200px-Taj_Mahal_in_March_2004.jpg",
+      "label": "Agra, India"
     }
   ]
 }

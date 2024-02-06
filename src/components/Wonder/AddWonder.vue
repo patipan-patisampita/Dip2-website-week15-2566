@@ -18,23 +18,23 @@
                         </span>
                     </div>
                     <div class="card-body text-success">
-                        <form @submit="addWonder">
+                        <form @submit.prevent="addWonder">
                             <div class="mb-1">
                                 <label for="">ชื่อสิ่งมหัศจรรย์ของโลก</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" v-model="wonderState.name" />
                             </div>
                             <div class="mb-1">
                                 <label for="">ตำแหน่ง ที่อยู่ สิ่งมหัศจรรย์ของโลก</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" v-model="wonderState.label" />
                             </div>
                             <div class="mb-1">
                                 <label for="">ลิงค์ภาพสิ่งมหัศจรรย์ของโลก</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" v-model="wonderState.imageUrl" />
                             </div>
 
                             <div class="mb-1">
 
-                                <button class="btn btn-primary text-white shadow">
+                                <button type="submit" class="btn btn-primary text-white shadow">
                                     ลงทะเบียนสิ่งมหัศจรรย์ของโลก
                                 </button>
                             </div>
@@ -48,7 +48,26 @@
 </template>
 
 <script setup>
+import axios from 'axios'
+import { reactive } from 'vue';
+import { useRouter } from 'vue-router';
 
+const wonderState = reactive({
+    name: '',
+    location: '',
+    imageUrl:''
+})
+
+const router = useRouter()
+
+const addWonder = async () => {
+    await axios.post(`http://localhost:3000/wonders`,wonderState)
+        .then(() => {
+            console.log(wonderState)
+            router.push({name:'wonders'})
+        })
+    alert('ลงทะเบียนสิ่งมหัศจรรย์ของโลก เรียบร้อยแล้ว')
+}
 </script>
 
 <style scoped>

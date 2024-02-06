@@ -1,6 +1,49 @@
 <template>
     <div class="container mt-4">
-        <h1>เพิ่มสิ่งมหัศจรรย์ของโลก</h1>
+        <div class="row">
+
+            <div class="col-md-5 mb-1 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-primary-subtitle p-0">
+                        <img src="https://img.jagranjosh.com/images/2023/October/19102023/seven-wonders.webp" class="card-img-top" alt="wonders">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-primary">
+                        <span class="text-white fs-5">
+                            ลงทะเบียนสิ่งมหัศจรรย์ของโลก
+                        </span>
+                    </div>
+                    <div class="card-body text-success">
+                        <form @submit="add - wonder">
+                            <div class="mb-1">
+                                <label for="">ชื่อสิ่งมหัศจรรย์ของโลก</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="mb-1">
+                                <label for="">ตำแหน่ง ที่อยู่ สิ่งมหัศจรรย์ของโลก</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="mb-1">
+                                <label for="">ภาพสิ่งมหัศจรรย์ของโลก</label>
+                                <input type="text" class="form-control" />
+                            </div>
+
+                            <div class="mb-1">
+
+                                <button class="btn btn-primary text-white shadow">
+                                    ลงทะเบียนสิ่งมหัศจรรย์ของโลก
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -8,6 +51,15 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
+.container {
+    font-family: 'Sarabun', sans-serif;
+
+}
+
+.form-label {
+    color: green;
+}
 </style>

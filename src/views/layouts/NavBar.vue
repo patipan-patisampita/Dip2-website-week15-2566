@@ -28,7 +28,7 @@ const logOut = async () => {
                                 class="bi bi-bank me-1"></i>Sign-in</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name:'wonders'}" class="nav-link" href="#"><i class="bi bi-bank me-1"></i>สิ่งมหัศจรรย์ของโลก</router-link>>
+                        <router-link :to="{name:'wonders'}" class="nav-link" href="#"><i class="bi bi-bank me-1"></i>สิ่งมหัศจรรย์ของโลก</router-link>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

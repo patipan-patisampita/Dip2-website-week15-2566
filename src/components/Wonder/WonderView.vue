@@ -1,13 +1,12 @@
 <template>
     <div class="container mt-4">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col-md-3" v-for="item in allWonders" :key="item.id">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+        <div class="row">
+            <div class="col-md-3 mb-3" v-for="item in allWonders" :key="item.id">
+                <div class="card shadow" style="height:18rem;">
+                    <img :src="item.imageUrl" class="card-img-top" alt="wonders">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">Location - {{ item.location }}</p>
                     </div>
                 </div>
             </div>

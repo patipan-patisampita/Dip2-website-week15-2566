@@ -30,8 +30,14 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to,from,next) => {
-  document.title = to.meta?.title ?? 'น้อยน่า'
+router.beforeEach((to, from, next) => {
+  // document.title = to.meta?.title ?? 'น้อยน่า'
+  const titleFromParams = to.params.pageTitle
+  if (titleFromParams !== null) {
+    document.title = ` ${to.home} | ${to.meta?.title} | ${to.params?.pageTitle} `
+  } else {
+    document.title = to.meta?.title
+  }
   next()
 })
 export default router

@@ -1,4 +1,5 @@
 <script setup>
+import axios from 'axios';
 import { computed, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { useVuelidate } from '@vuelidate/core'
@@ -24,6 +25,13 @@ const submitForm = async () => {
     const result = await v$.value.$validate()
     if (result) {
         alert("Success, form submited!")
+        const result = await axios.get(`http://localhost:3000/users?email=${userForm.email}&password=${userForm.password}`)
+        console.log(result)
+        if (result.status == 200 && result.data.length > 0) {
+            console.log("Logged In")
+        } else {
+            console.log("No User Found")
+        }
     } else {
         alert("error, form submited!")
     }

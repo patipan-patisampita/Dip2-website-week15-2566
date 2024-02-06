@@ -12,6 +12,11 @@ const userForm = reactive({
     password: "",
 });
 
+//ERROR user
+const errorUser = reactive({
+    userNotfound: ""
+})
+
 //Validate
 const rules = computed(() => {
     return {
@@ -24,16 +29,19 @@ const v$ = useVuelidate(rules, userForm)
 const submitForm = async () => {
     const result = await v$.value.$validate()
     if (result) {
-        alert("Success, form submited!")
+        
         const result = await axios.get(`http://localhost:3000/users?email=${userForm.email}&password=${userForm.password}`)
-        console.log(result)
+        // console.log(result)
         if (result.status == 200 && result.data.length > 0) {
+            alert("Success, form submited!")
             console.log("Logged In")
         } else {
-            console.log("No User Found")
+            // console.log("No User Found")
+            alert("Error, form submited!")
+            errorUser.userNotfound = "ไม่พบผู้ใช้งาน"
         }
     } else {
-        alert("error, form submited!")
+        alert("Error, form submited!")
     }
 }
 
@@ -79,6 +87,9 @@ function SignUpPage() {
                                         Sing Up
                                     </router-link>
                                 </p>
+                            </div>
+                            <div class="text-center text-danger">
+                                 {{ errorUser.userNotfound }}
                             </div>
                         </form>
                     </div>

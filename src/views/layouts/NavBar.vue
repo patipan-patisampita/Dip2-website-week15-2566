@@ -27,9 +27,30 @@ const logOut = async () => {
                         <router-link :to="{ name: 'signin' }" class="nav-link" href="#"><i
                                 class="bi bi-bank me-1"></i>Sign-in</router-link>
                     </li>
-                    <li class="nav-item">
-                        <router-link :to="{name:'wonders'}" class="nav-link" href="#"><i class="bi bi-bank me-1"></i>สิ่งมหัศจรรย์ของโลก</router-link>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-bank2 me-1"></i>สิ่งมหัศจรรย์ของโลก
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <RouterLink :to="{ name: 'wonders' }" class="dropdown-item">สิ่งมหัศจรรย์ของโลก
+                                </RouterLink>
+                            </li>
+                            <li>
+                                <RouterLink :to="{ name: 'add-wonder' }" class="dropdown-item">เพิ่มสิ่งมหัศจรรย์ของโลก
+                                </RouterLink>
+                            </li>
+                            <li><a class="dropdown-item" href="#">แก้ไขสิ่งมหัศจรรย์ของโลก</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">ลบมหัศจรรย์ของโลก</a></li>
+                        </ul>
                     </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -76,7 +97,8 @@ const logOut = async () => {
                         <a class="nav-link" href="#">เว็บอื่นๆ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" @click="logOut"><i class="bi bi-box-arrow-right me-1"></i>ออกจากระบบ</a>
+                        <a class="nav-link" href="#" @click="logOut"><i
+                                class="bi bi-box-arrow-right me-1"></i>ออกจากระบบ</a>
                     </li>
                 </ul>
             </div>

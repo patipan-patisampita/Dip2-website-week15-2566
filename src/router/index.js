@@ -35,7 +35,7 @@ const router = createRouter({
     },
     {
       path: '/add-wonder',
-      name: 'addwonders',
+      name: 'add-wonder',
       meta: { title: 'เพิ่มสิ่งมหัศจรรย์ของโลก' },
       component: () => import('../components/Wonder/AddWonder.vue')
     },

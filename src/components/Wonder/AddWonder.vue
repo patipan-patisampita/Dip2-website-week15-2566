@@ -4,8 +4,8 @@
 
             <div class="col-md-5 mb-1 mx-auto">
                 <div class="card shadow">
-                    <div class="card-header bg-primary-subtitle p-0">
-                        <img src="https://img.jagranjosh.com/images/2023/October/19102023/seven-wonders.webp" class="card-img-top" alt="wonders">
+                    <div class="card-header p-0">
+                        <img src="https://static.wanderon.in/wp-content/uploads/2023/11/top-min.jpg" class="card-img-top" alt="wonders">
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                                 <input type="text" class="form-control" />
                             </div>
                             <div class="mb-1">
-                                <label for="">ภาพสิ่งมหัศจรรย์ของโลก</label>
+                                <label for="">ลิงค์ภาพสิ่งมหัศจรรย์ของโลก</label>
                                 <input type="text" class="form-control" />
                             </div>
 

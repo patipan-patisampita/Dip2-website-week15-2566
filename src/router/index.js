@@ -32,11 +32,11 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   // document.title = to.meta?.title ?? 'น้อยน่า'
-  const titleFromParams = to.params.pageTitle
+  const titleFromParams = to.params?.pageTitle
   if (titleFromParams !== null) {
-    document.title = ` ${to.home} | ${to.meta?.title} | ${to.params?.pageTitle} `
+    document.title = ` ${to.name} | ${to.meta?.title}`
   } else {
-    document.title = to.meta?.title
+    document.title = to.meta?.title ?? 'น้อยน่า'
   }
   next()
 })

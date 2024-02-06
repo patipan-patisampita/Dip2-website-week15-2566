@@ -5,6 +5,15 @@
 </template>
 
 <script setup>
+import axios from 'axios'
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    axios.get(`http://localhost:3000/wonders`)
+        .then((response) => {
+        console.log(response.data)
+    })
+})
 
 </script>
 

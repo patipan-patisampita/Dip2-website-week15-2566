@@ -1,7 +1,7 @@
 <template>
     <div class="container mt-4">
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
+            <div class="col-md-3" v-for="item in allWonders" :key="item.id">
                 <div class="card">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -17,12 +17,15 @@
 
 <script setup>
 import axios from 'axios'
-import { onMounted } from 'vue';
+import { onMounted,ref } from 'vue';
+
+const allWonders = ref([]);
 
 onMounted(() => {
     axios.get(`http://localhost:3000/wonders`)
         .then((response) => {
-            console.log(response.data)
+            // console.log(response.data)
+            allWonders.value = response.data
         })
 })
 

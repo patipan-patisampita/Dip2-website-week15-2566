@@ -71,7 +71,7 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/The_Monastery%2C_Petra%2C_Jordan8.jpg"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Colosseum",
       "location": "Rome, Italy",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Rome_Colosseum_exterior_panorama.jpg"
@@ -91,8 +91,7 @@
     {
       "id": 7,
       "name": "Taj Mahal",
-      "location": "",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Taj_Mahal_in_March_2004.jpg/200px-Taj_Mahal_in_March_2004.jpg"
+      "location": "Agra, India",
     }
   ]
 }

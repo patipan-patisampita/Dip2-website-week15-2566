@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "fname": "Mark ",
       "lname": "Zuckerberg",
       "email": "mark@gmail.com",
@@ -11,7 +11,7 @@
       "address": "USA"
     },
     {
-      "id": "2",
+      "id": 2,
       "fname": "Elon ",
       "lname": "Musk",
       "email": "elon@gmail.com",
@@ -21,7 +21,7 @@
       "address": "USA"
     },
     {
-      "id": "161c",
+      "id": 3,
       "fname": "Bill",
       "lname": "Gate",
       "email": "bill@gmail.com",
@@ -31,7 +31,7 @@
       "address": "USA"
     },
     {
-      "id": "9fdc",
+      "id": 4,
       "fname": "Jeff",
       "lname": "Beszos",
       "email": "jeff@gmail.com",
@@ -41,7 +41,7 @@
       "address": "USA"
     },
     {
-      "id": "17c0",
+      "id": 5,
       "fname": "Jack",
       "lname": "ma",
       "email": "jack@gmail.com",
@@ -53,47 +53,46 @@
   ],
   "wonders": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Giza Pyramids",
       "location": "Giza Necropolis, Egypt",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pyramids_of_the_Giza_Necropolis.jpg"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Great Wall of China",
       "location": "China",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/The_Great_Wall_of_China_at_Jinshanling.jpg"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Petra",
       "location": "Ma'an, Jordan",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/The_Monastery%2C_Petra%2C_Jordan8.jpg"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Colosseum",
       "location": "Rome, Italy",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Rome_Colosseum_exterior_panorama.jpg"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Chichén Itzá",
       "location": "Yucatán, Mexico",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chichen-Itza-Castillo-Seen-From-East.JPG"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Machu Picchu",
       "location": "Cuzco Region, Peru",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg"
     },
     {
-      "id": "79d7",
+      "id": 7,
       "name": "Taj Mahal",
       "location": "",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Taj_Mahal_in_March_2004.jpg/200px-Taj_Mahal_in_March_2004.jpg",
-      "label": "Agra, India"
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Taj_Mahal_in_March_2004.jpg/200px-Taj_Mahal_in_March_2004.jpg"
     }
   ]
 }
